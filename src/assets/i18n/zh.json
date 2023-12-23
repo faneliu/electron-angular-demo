@@ -1,0 +1,10 @@
+{
+  "hello": "你好世界!",
+  "apples": "我有 {{count}} 苹果",
+  "dashboard.title": "Missing value for 'dashboard.title'",
+  "dashboard.count": "Missing value for 'dashboard.count'",
+  "dashboard": {
+    "title": "Dashboard 标题",
+    "count": "Dashboard 数目"
+  }
+}

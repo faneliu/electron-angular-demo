@@ -1,27 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TranslocoService, translate } from '@ngneat/transloco';
-import { IpcRenderer } from 'electron';
-import { LayoutComponent } from './shared/components/layout/layout.component';
-import { filter } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-test-i18n-comp',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './test-i18n-comp.component.html',
+  styleUrls: ['./test-i18n-comp.component.scss']
 })
-export class AppComponent {
-  title = 'electron-angular-demo';
-  vData
-  count = 0
+export class TestI18nCompComponent {
 
   activeLang: string
   availableLangs: string[] | { id: string, label: string }[]
 
   constructor(private translocoService: TranslocoService) {
-    this.vData = {
-      name: 'Christoph Burgdorf',
-      email: 'christoph@thoughtram.io'
-    }
     this.activeLang = this.translocoService.getActiveLang()
     this.availableLangs = this.translocoService.getAvailableLangs();
   }
@@ -42,14 +35,5 @@ export class AppComponent {
     //   const translation1 = this.translocoService.translate('apples', { count: this.count}, 'en')
     //   console.log(translation, translation1);
     // })
-  }
-
-  changeData() {
-    this.vData.name = 'Pascal Prech';
-    this.count++
-  }
-
-  handleClick() {
-    this.changeData()
   }
 }
