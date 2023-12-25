@@ -17,7 +17,10 @@ export class AppComponent {
   activeLang: string
   availableLangs: string[] | { id: string, label: string }[]
 
+  versions: any
+
   constructor(private translocoService: TranslocoService) {
+    // this.versions = window.versions;
     this.vData = {
       name: 'Christoph Burgdorf',
       email: 'christoph@thoughtram.io'

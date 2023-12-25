@@ -1,9 +1,16 @@
+<!--
+ * @Descripttion: 
+ * @Author: liufan
+ * @Date: 2023-11-16 09:35:24
+ * @LastEditors: liufan
+ * @LastEditTime: 2023-12-25 16:03:05
+-->
 <app-layout>
   <button (click)="handleClick()" i18n>点击</button>
 
   <!-- <app-test-comp [vData]="vData" [count]="count"></app-test-comp> -->
   <router-outlet></router-outlet>
-
+  <!-- <app-test-i18n-comp></app-test-i18n-comp> -->
   <ng-container *transloco="let t">
     <p>{{ t("hello") }}</p>
     <p>{{ t("apples", { count: 10 }) }}</p>
@@ -26,5 +33,7 @@
   <button (click)="changeLang('zh')">切换中文</button> 
 
   <div>当前语言{{activeLang}}</div>
+
+  <div>本应用正在使用 Chrome ()</div>
 
 </app-layout>

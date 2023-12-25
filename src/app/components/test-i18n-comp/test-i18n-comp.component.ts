@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslocoService, translate } from '@ngneat/transloco';
+import { TranslocoRootModule } from 'src/app/transloco-root.module';
 
 @Component({
   selector: 'app-test-i18n-comp',
-  standalone: true,
-  imports: [CommonModule],
+  // standalone: true,
+  // imports: [CommonModule, TranslocoRootModule],
   templateUrl: './test-i18n-comp.component.html',
   styleUrls: ['./test-i18n-comp.component.scss']
 })

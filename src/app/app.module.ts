@@ -3,7 +3,7 @@
  * @Author: liufan
  * @Date: 2023-11-16 09:35:24
  * @LastEditors: liufan
- * @LastEditTime: 2023-12-23 18:15:17
+ * @LastEditTime: 2023-12-24 15:58:15
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,13 +21,14 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TestCompComponent } from './components/test-comp/test-comp.component';
-// import { TestI18nCompComponent } from './components/test-i18n-comp/test-i18n-comp.component';
+import { TestI18nCompComponent } from './components/test-i18n-comp/test-i18n-comp.component';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestI18nCompComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,6 @@ registerLocaleData(zh);
     HttpClientModule,
     TranslocoRootModule,
     TestCompComponent,
-    // TestI18nCompComponent,
     LayoutComponent,
     FormsModule,
     BrowserAnimationsModule
