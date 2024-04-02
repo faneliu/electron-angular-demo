@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "ng": "ng",
+    "electron-builder": "electron-builder",
     "dev": "npm-run-all -p ng:start electron:start",
     "build": "ng build --base-href ./ && npm run electron:build",
-    "electron:serve": "tsc -p tsconfig-serve.json && npx electron . --serve",
+    "electron:serve": "tsc -p tsconfig-serve.json && NODE_ENV=dev electron . --serve",
     "electron:start": "wait-on http-get://localhost:4300/ && npm run electron:serve",
     "electron:build": "tsc -p tsconfig-serve.json && NODE_ENV=prod electron .",
     "ng:start": "ng serve --hmr --port 4300",
