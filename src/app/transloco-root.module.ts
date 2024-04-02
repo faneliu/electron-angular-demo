@@ -1,10 +1,3 @@
-/*
- * @Descripttion: 
- * @Author: liufan
- * @Date: 2023-12-03 22:47:53
- * @LastEditors: liufan
- * @LastEditTime: 2023-12-22 10:47:05
- */
 import {
   provideTransloco,
   provideTranslocoMissingHandler,
@@ -27,8 +20,10 @@ import { TranslocoCustomTranspiler } from './transloco-custom-transpiler';
           // Remove this option if your application doesn't support changing language in runtime.
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),
+          fallbackLang: 'zh',
           missingHandler: {
             useFallbackTranslation: false,
+            allowEmpty: true
           }
 
         },

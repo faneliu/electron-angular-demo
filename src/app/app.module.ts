@@ -3,7 +3,7 @@
  * @Author: liufan
  * @Date: 2023-11-16 09:35:24
  * @LastEditors: liufan
- * @LastEditTime: 2023-12-24 15:58:15
+ * @LastEditTime: 2024-03-28 16:29:01
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TestCompComponent } from './components/test-comp/test-comp.component';
 import { TestI18nCompComponent } from './components/test-i18n-comp/test-i18n-comp.component';
+import { ListComponent } from './components/list/list.component';
 
 registerLocaleData(zh);
 
@@ -36,6 +37,7 @@ registerLocaleData(zh);
     HttpClientModule,
     TranslocoRootModule,
     TestCompComponent,
+    ListComponent,
     LayoutComponent,
     FormsModule,
     BrowserAnimationsModule

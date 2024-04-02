@@ -3,6 +3,7 @@ import { TranslocoService, translate } from '@ngneat/transloco';
 import { IpcRenderer } from 'electron';
 import { LayoutComponent } from './shared/components/layout/layout.component';
 import { filter } from 'rxjs';
+import { ListComponent } from './components/list/list.component';
 
 @Component({
   selector: 'app-root',
