@@ -1,6 +1,8 @@
 {
   "hello": "",
   "apples": "",
-  "dashboard.title": "",
-  "dashboard.count": ""
+  "dashboard": {
+    "title": "",
+    "count": ""
+  }
 }
