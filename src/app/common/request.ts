@@ -28,6 +28,10 @@ export class RequestBase {
     });
   }
 
+  protected normalGet(url: string, body: any, options: any = {}) {
+    return this.http.get(url, body)
+  }
+
   protected post(relativeUrl: string, data: any) {
     return this.http.post(this.baseUrl + relativeUrl, {
       headers: this.headers,

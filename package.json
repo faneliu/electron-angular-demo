@@ -65,5 +65,15 @@
     "typescript": "~5.1.3",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
+  },
+  "build": {
+    "appId": "com.electron-angular-demo.app",
+    "files": [
+      "main.js"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "productName": "electron-angular-demo"
   }
 }

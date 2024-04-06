@@ -1,3 +1,16 @@
+<nz-slider
+  [nzTooltipVisible]="'never'"
+  [nzMin]="20"
+  [nzMax]="68"
+  [(ngModel)]="size"
+  (ngModelChange)="previewSizeChange($event)"
+></nz-slider>
 <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-  <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+  <div
+    *cdkVirtualFor="let item of fontlist"
+    class="example-item"
+    [ngStyle]="{ 'font-size': size + 'px', 'font-family': 'font-name-' + item.id }"
+  >
+    <div>The quick brown fox jumps over the lazy dog</div>
+  </div>
 </cdk-virtual-scroll-viewport>
