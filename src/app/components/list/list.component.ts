@@ -4,7 +4,7 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { CommonModule } from '@angular/common';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { FormsModule } from '@angular/forms';
-
+import throttle from 'lodash/throttle';
 
 
 @Component({
@@ -22,9 +22,9 @@ export class ListComponent {
 
   constructor(private apiService: ApiService) { }
 
-  previewSizeChange(v: any) {
+  previewSizeChange = throttle((v: any) => {
     this.size = v
-  }
+  }, 16)
 
   getAllFontList() {
     this.apiService.getFontList().subscribe((data) => {
